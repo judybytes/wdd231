@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #420c3e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.profile-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #2a9d8f;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Course Work Section */
+.coursework {
+    margin: 2rem 0;
+}
+
+.coursework ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coursework ul li {
+    background-color: #e9c46a;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Location Section */
+.location {
+    margin: 2rem 0;
+}
+
+.location-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figure {
+    text-align: center;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover {
+    background-color: #e76f51;
+}
+
+/* Course Cards */
+#course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.course-card {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #e9c46a;
+    text-align: center;
+}
+
+.course-card.completed {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    background-color: #420c3e;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 0.9rem;
+    }
+
+    .profile-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #course-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
