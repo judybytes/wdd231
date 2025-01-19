@@ -22,10 +22,10 @@ document.getElementById('menu-button').addEventListener('click', function() {
     icon.textContent = isExpanded ? 'menu' : 'close';
 });
 
-// Enhanced Course Display Function
+// Course Display Function
 function displayCourses(filter = 'all') {
     const courseContainer = document.getElementById('course-container');
-    courseContainer.style.opacity = '0';
+    courseContainer.classList.add('fade-out');
     
     setTimeout(() => {
         courseContainer.innerHTML = '';
@@ -38,8 +38,7 @@ function displayCourses(filter = 'all') {
 
         filteredCourses.forEach((course, index) => {
             const card = document.createElement('article');
-            card.className = `course-card ${course.completed ? 'completed' : ''}`;
-            card.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1}s`;
+            card.className = `course-card ${course.completed ? 'completed' : ''} fade-in`;
             
             const statusIcon = course.completed ? 'check_circle' : 'schedule';
             card.innerHTML = `
@@ -55,101 +54,100 @@ function displayCourses(filter = 'all') {
                 </p>
             `;
             
-            // Add hover effect listeners
-            card.addEventListener('mouseover', () => {
-                card.style.transform = 'translateY(-5px)';
-            });
-            
-            card.addEventListener('mouseout', () => {
-                card.style.transform = 'translateY(0)';
-            });
-            
             courseContainer.appendChild(card);
         });
         
-        courseContainer.style.opacity = '1';
+        courseContainer.classList.remove('fade-out');
     }, 300);
 }
 
-// Filter Button Event Listeners
-document.querySelectorAll('.filter-button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        // Remove active class from all buttons
-        document.querySelectorAll('.filter-button').forEach(btn => 
-            btn.classList.remove('active'));
+// Add Hover Effects
+function addHoverEffects() {
+    const cards = document.querySelectorAll('.progress-card, .course-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('card-hover');
+        });
         
-        // Add active class with animation
-        e.target.classList.add('active');
-        e.target.style.animation = 'pulse 0.3s ease';
-        
-        setTimeout(() => {
-            e.target.style.animation = '';
-        }, 300);
-        
-        displayCourses(e.target.dataset.filter);
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('card-hover');
+        });
     });
-});
+}
+
+// Filter Button Event Listeners
+function initializeFilterButtons() {
+    document.querySelectorAll('.filter-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-button').forEach(btn => 
+                btn.classList.remove('active'));
+            
+            // Add active class and animation
+            button.classList.add('active');
+            
+            // Get the filter value and update display
+            const filter = button.dataset.filter;
+            displayCourses(filter);
+        });
+    });
+}
 
 // Update Date Information
 function updateDates() {
-    // Update copyright year
     const currentYear = new Date().getFullYear();
     document.getElementById('current-year').textContent = currentYear;
-    
-    // Update last modified date
     document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// Initialize Page with Animations
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize dates
-    updateDates();
-    
-    // Initial course display
-    displayCourses();
-    
-    // Add fade-in animation to sections
+// Initialize Animations
+function initializeAnimations() {
     document.querySelectorAll('section').forEach((section, index) => {
-        section.style.opacity = '0';
-        section.style.animation = `fadeIn 0.5s ease forwards ${index * 0.2}s`;
+        section.classList.add('fade-in');
     });
-    
-    // Add hover effects to progress cards
-    document.querySelectorAll('.progress-card').forEach(card => {
-        card.addEventListener('mouseover', () => {
-            card.style.transform = 'translateY(-5px)';
-        });
-        
-        card.addEventListener('mouseout', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
-});
+}
 
-// Error Handling
-window.addEventListener('error', function(e) {
-    console.error('An error occurred:', e.error);
-    // You could add more sophisticated error handling here
-});
+// Initialize Page
+function initializePage() {
+    updateDates();
+    displayCourses();
+    initializeFilterButtons();
+    initializeAnimations();
+    addHoverEffects();
+}
 
-// Accessibility Enhancement
+// Event Listeners
+document.addEventListener('DOMContentLoaded', initializePage);
+
+// Accessibility
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && document.getElementById('nav-menu').classList.contains('open')) {
         document.getElementById('menu-button').click();
     }
 });
 
-// Performance Optimization
+// Responsive Design Handler
+function handleResponsiveDesign() {
+    const navMenu = document.getElementById('nav-menu');
+    const menuButton = document.getElementById('menu-button');
+    
+    if (window.innerWidth > 768 && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.querySelector('.material-icons').textContent = 'menu';
+    }
+}
+
+// Debounced resize handler
 let resizeTimer;
-window.addEventListener('resize', function() {
+window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        // Handle any necessary responsive adjustments
-        if (window.innerWidth > 768) {
-            document.getElementById('nav-menu').classList.remove('open');
-            document.getElementById('menu-button').querySelector('.material-icons').textContent = 'menu';
-        }
-    }, 250);
+    resizeTimer = setTimeout(handleResponsiveDesign, 250);
+});
+
+// Error Handler
+window.addEventListener('error', function(e) {
+    console.error('An error occurred:', e.error);
 });
 
 
