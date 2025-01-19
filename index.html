@@ -3,66 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dieketseng Judith Motsetse's course homepage for WDD231.">
+    <meta name="description" content="Dieketseng Judith Motsetse's course homepage for WDD231 - Web Frontend Development">
     <meta name="author" content="Dieketseng Judith Motsetse">
-    <title>Dieketseng Judith Motsetse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dieketseng Judith Motsetse | WDD 231</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="scripts/script.js"></script>
 </head>
 <body>
     <header>
         <div class="profile">
-            <img src="images/profile.jpg" alt="Profile Picture" class="profile-img">
-            <h1>Dieketseng Judith Motsetse</h1>
+            <div class="profile-content">
+                <img src="images/profile.jpg" alt="Profile Picture" width="120" height="120">
+                <div class="profile-text">
+                    <h1>Dieketseng Judith Motsetse</h1>
+                    <p class="subtitle">Web Frontend Developer</p>
+                </div>
+            </div>
         </div>
         <nav>
-            <ul>
-                <li><a href="#" aria-current="page">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/dieketsengmotsetse" target="_blank" rel="noopener">LinkedIn</a></li>
+            <button id="menu-button" aria-label="Toggle Menu" aria-controls="nav-menu" aria-expanded="false">
+                <span class="material-icons">menu</span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#" class="active" aria-current="page">
+                    <span class="material-icons">home</span> Home
+                </a></li>
+                <li><a href="chamber/directory.html">
+                    <span class="material-icons">business</span> Chamber
+                </a></li>
+                <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">
+                    <span class="material-icons">code</span> GitHub
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/dieketsengmotsetse" target="_blank" rel="noopener">
+                    <span class="material-icons">link</span> LinkedIn
+                </a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <!-- Course Work Section -->
         <section class="coursework">
-            <h2>Course Work</h2>
-            <ul>
-                <li>.</li>
-                <li>.</li>
-                <li>.</li>
-            </ul>
-        </section>
-
-        <!-- Location Section -->
-        <section class="location">
-            <h2>Cape Town, South Africa</h2>
-            <figure>
-                <img src="images/cape-town.webp" alt="Beautiful view of Cape Town" class="location-img">
-                <figcaption>Discover the beauty of Cape Town, South Africa.</figcaption>
-            </figure>
-        </section>
-
-        <!-- Certificate Section -->
-        <section class="certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="filter-buttons">
-                <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
+            <h2><span class="material-icons">school</span> Course Work</h2>
+            <div class="progress-cards">
+                <div class="progress-card">
+                    <span class="material-icons md-36">menu_book</span>
+                    <h3>Learning Activities</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;">25%</div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <span class="material-icons md-36">task</span>
+                    <h3>Project Milestones</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%;">20%</div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <span class="material-icons md-36">account_tree</span>
+                    <h3>Final Project</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%;">10%</div>
+                    </div>
+                </div>
             </div>
-            <div id="course-container"></div>
-            <p>Total Credits: <span id="total-credits">0</span></p>
+        </section>
+
+        <section class="location">
+            <h2><span class="material-icons">location_on</span> Cape Town, South Africa</h2>
+            <div class="location-card">
+                <figure>
+                    <img src="images/cape-town.webp" alt="Beautiful view of Cape Town" width="800" height="400">
+                    <figcaption>The stunning landscape of Cape Town, South Africa</figcaption>
+                </figure>
+                <div class="weather-widget">
+                    <div class="weather-info">
+                        <span class="material-icons">wb_sunny</span>
+                        <span>24°C</span>
+                        <p>Sunny</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificate">
+            <h2><span class="material-icons">workspace_premium</span> Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button class="filter-button active" data-filter="all">
+                    <span class="material-icons">grid_view</span> All
+                </button>
+                <button class="filter-button" data-filter="CSE">
+                    <span class="material-icons">code</span> CSE
+                </button>
+                <button class="filter-button" data-filter="WDD">
+                    <span class="material-icons">brush</span> WDD
+                </button>
+            </div>
+            <div id="course-container" class="course-grid"></div>
+            <div class="credits-summary">
+                <span class="material-icons">star</span>
+                <p>Total Credits: <span id="total-credits">0</span></p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="current-year"></span> Dieketseng Judith Motsetse, Cape Town, South Africa</p>
-        <p id="lastModified">Last Update: </p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+                    <span class="material-icons">code</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dieketsengmotsetse" target="_blank" rel="noopener">
+                    <span class="material-icons">link</span>
+                </a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Dieketseng Judith Motsetse | Cape Town, South Africa</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 </html>
-
 
 

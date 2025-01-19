@@ -1,0 +1,68 @@
+{
+    "members": [
+        {
+            "name": "Dixon Batteries",
+            "address": "Old Johannesburg Road, Duncanville, Vereeniging,1930",
+            "phone": "016 455 1800",
+            "website": "https://dixonbatteries.co.za",
+            "image": "dixon.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Auto Dotcom",
+            "address": "25 Robie Street, C6, Vanderbijlpark, 1911",
+            "phone": "071 659 9715",
+            "website": "N/A",
+            "image": "auto-dotcom.jpg",
+            "membershipLevel": 1
+        },
+        { 
+            "name": "Honda Vaal",
+            "address": "18 Beethoven Street, Vereeniging,1930",
+            "phone":"016 450 6900",
+            "website": "N/A",
+            "image":"honda-vaal.jpg",
+            "membershipLevel": 3
+         },
+         {
+            "name": "Absolutely Perfect Water",
+            "address": "shop 11, Perfect Cent, Macowen Str, SE2, Vanderbijlpark,1911",
+            "phone": "016 982 1885",
+            "website": "https://perfectwater.co.za",
+            "image": "perfect-water.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Body Stress Release",
+            "address": "Vaal Triangle, Vanderbijlpark,1911",
+            "phone": "073 714 7642",
+            "website": "https://bodystressrelease.com",
+            "image": "body-stress-release.jpg",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Agneta A Grove & Carina Petzer",
+            "address": "10 Doon Avenue, Three Rivers, Vereeniging, 1929",
+            "phone": "016 423 4655",
+            "website": "N/A",
+            "image": "agneta.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "A & C Plumbing Vaal Triangle",
+            "address": "29 Mafarlane Street, Meyerton, 1929",
+            "phone": "079 525 0169",
+            "website": "https://ancplumb.wix.com",
+            "image": "ac-plumbing.jpg",
+            "membershipLevel": 2
+        },
+        {
+            "name": "911 Cabinets",
+            "address": "Vaal Triangle, Vanderbijlpark,1911",
+            "phone": "082 495 3032",
+            "website": "N/A",
+            "image": "911.jpg",
+            "membershipLevel": 2
+        }
+    ]
+}
