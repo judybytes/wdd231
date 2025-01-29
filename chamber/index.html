@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Welcome to the Vaal Triangle Chamber of Commerce - Your gateway to local business networking, resources, and community growth in the Vaal Triangle area.">
+    <meta name="author" content="Dieketseng Judith Motsetse">
+    
+    <meta property="og:title" content="Vaal Triangle Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/chamber-logo.png">
+    <meta property="og:url" content="https://djmotsetse.github.io/wdd231/chamber">
+    
+    <title>Home | Vaal Triangle Chamber</title>
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/chamber-logo.png" alt="Chamber Logo">
+                <h1>Vaal Triangle Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+                <ul id="primaryNav">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home">
+        <div class="hero">
+            <img src="images/hero.jpg" alt="Vaal Triangle Business District" class="hero-image">
+            <div class="hero-content">
+                <h2>Welcome to Vaal Triangle Chamber</h2>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </div>
+
+        <section class="events">
+            <h2>Current Events</h2>
+            <div class="event-card">
+                <h3>Business Networking Breakfast</h3>
+                <p>Join us for our monthly networking breakfast. Connect with local business leaders and expand your network.</p>
+                <p class="event-details">📅 February 15, 2025 | ⏰ 9:30 AM</p>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-card">
+                <div class="current-weather">
+                 <div id="current-icon"></div>
+                 <div id="current-temp"></div>
+                 <div id="weather-desc"></div>
+            </div>
+            <div class="weather-details">
+                <div id="humidity"></div>
+                <div id="wind-speed"></div>
+            </div>
+            <div id="forecast" class="forecast"></div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Plot 22 Bloempark</p>
+                <p>Vanderbijlpark</p>
+                <p>Phone: 016 056 1419</p>
+                <p>Email: info@vaaltrianglechamber.org</p>
+            </div>
+            <nav class="social-media">
+                <h3 class="sr-only">Social Media Links</h3>
+                <ul>
+                    <li><a href="#" aria-label="Visit our YouTube page"><img src="images/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="#" aria-label="Visit our Twitter page"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#" aria-label="Visit our LinkedIn page"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Vaal Triangle Chamber | Dieketseng Judith Motsetse | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlight.js"></script>
+    <script>
+        // Update copyright year and last modified date
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>   
+</body>
+</html>

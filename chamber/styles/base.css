@@ -1,9 +1,9 @@
 /* base.css */
 :root {
-    --primary-color: #2b4570;
-    --secondary-color: #ea8c55;
+    --primary-color: #6f1c92;
+    --secondary-color: #d85f1d;
     --background-color: #f5f5f5;
-    --text-color: #333333;
+    --text-color: #000000;
     --header-font: 'Montserrat', sans-serif;
     --body-font: 'Poppins', sans-serif;
     --card-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -87,6 +87,191 @@ nav a.active {
     background-color: var(--secondary-color);
 }
 
+/* Home Page Styles */
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+    font-family: var(--header-font);
+    font-size: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Events Section */
+.events {
+    background: rgb(169, 166, 166);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.event-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.event-details {
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Weather Section */
+.weather {
+    background: rgb(181, 177, 177);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.loading {
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.weather-card {
+    text-align: center;
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#current-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background:rgb(134, 83, 155);
+    border-radius: 8px;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    background:rgb(148, 98, 171);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.forecast-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.forecast-desc {
+    font-size: 0.9rem;
+    color: #0f0e0e;
+}
+
+.weather-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.loading {
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+/* Weather Error Styling */
+.error-message {
+    padding: 1rem;
+    text-align: center;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+}
+
+.weather-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-day img {
+    width: 40px;
+    height: 40px;
+}
+
 /* Directory Controls */
 .directory-controls {
     margin: 2rem auto;
@@ -98,8 +283,8 @@ nav a.active {
 .directory-controls button {
     padding: 0.8rem 1.5rem;
     margin: 0 0.5rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color:  rgb(80, 60, 89);
+    color: rgb(246, 243, 243);
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -134,7 +319,7 @@ nav a.active {
 
 /* Member Card Styling */
 .member-card {
-    background: white;
+    background: rgb(160, 158, 158);
     border-radius: 10px;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease;
@@ -152,10 +337,10 @@ nav a.active {
 }
 
 .grid .member-card img {
-    width: 100%;
+    width: 50%;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 50%;
 }
 
 .grid .member-card .card-content {
@@ -178,58 +363,60 @@ nav a.active {
     border-radius: 50%;
 }
 
-/* Card Content */
-.member-card h2 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-family: var(--header-font);
-    font-weight: 700;
+/* Spotlights Section */
+.spotlights {
+    background: rgb(178, 175, 175);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
 }
 
-.member-card p {
+#spotlight-container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.spotlight-card {
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.spotlight-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.spotlight-card img[src*="placeholder"] {
+    opacity: 0.7;
+    border: 2px solid #ccc;
+}
+
+.no-website {
     color: #666;
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
+    font-style: italic;
 }
 
-.member-card a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 0.5rem;
-    transition: color 0.3s ease;
+/* Error Message Styling */
+.error-message {
+    padding: 1rem;
+    text-align: center;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    margin: 1rem 0;
 }
 
-.member-card a:hover {
+.spotlight-card h3 {
     color: var(--primary-color);
-}
-
-/* Membership Level Badge */
-.membership-level {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-top: 0.8rem;
-    font-family: var(--header-font);
-}
-
-.gold {
-    background-color: #ffd700;
-    color: #000;
-}
-
-.silver {
-    background-color: #c0c0c0;
-    color: #000;
-}
-
-.member {
-    background-color: #cd7f32;
-    color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 /* Footer Styles */
@@ -262,6 +449,39 @@ footer {
     padding-top: 1rem;
 }
 
+/* Social Media Styles */
+.social-media ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: translateY(-3px);
+}
+
+/* Hide heading visually but keep it for screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Mobile Navigation */
 #hamburgerBtn {
     display: none;
@@ -281,6 +501,14 @@ footer {
     
     .logo h1 {
         font-size: 1rem;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
     }
     
     .list .member-card {
@@ -308,6 +536,60 @@ footer {
         left: 0;
         right: 0;
         background-color: var(--primary-color);
+        padding: 1rem;
+    }
+    
+    .forecast {
+        grid-template-columns: 1fr;
+    }
+    
+    #spotlight-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    .events {
+        grid-column: 1 / 2;
+    }
+
+    .weather {
+        grid-column: 2 / 3;
+    }
+
+    .spotlights {
+        grid-column: 1 / -1;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .weather-card, .event-card, .spotlight-card {
         padding: 1rem;
     }
 }
