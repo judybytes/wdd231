@@ -1,0 +1,52 @@
+{
+    "locations": [
+        {
+            "name": "Vaal Mall",
+            "address": "Attie Fourie Street, Vanderbijlpark",
+            "description": "The premier shopping destination in the Vaal Triangle, featuring over 120 stores, restaurants, and entertainment venues.",
+            "image": "vaal-mall.webp"
+        },
+        {
+            "name": "Vaal River Barrage",
+            "address": "Barrage Road, Vanderbijlpark",
+            "description": "A scenic spot perfect for water sports, fishing, and riverside picnics with beautiful views of the Vaal River.",
+            "image": "vaal-river.webp"
+        },
+        {
+            "name": "Emerald Resort & Casino",
+            "address": "777 Frikkie Meyer Blvd, Vanderbijlpark",
+            "description": "Entertainment complex featuring a casino, hotel, water park, and various dining options.",
+            "image": "emerald-resort.webp"
+        },
+        {
+            "name": "Vaal University of Technology",
+            "address": "Andries Potgieter Blvd, Vanderbijlpark",
+            "description": "Leading institution of higher learning, offering various technical and academic programs.",
+            "image": "vut-campus.webp"
+        },
+        {
+            "name": "Stonehaven on Vaal",
+            "address": "Next to Vaal River, Vanderbijlpark",
+            "description": "Luxury riverside venue offering conferences, weddings, and outdoor activities.",
+            "image": "stonehaven.webp"
+        },
+        {
+            "name": "Vaal Teknorama Museum",
+            "address": "Klasie Havenga Street, Vanderbijlpark",
+            "description": "Museum showcasing the industrial and cultural heritage of the Vaal Triangle region.",
+            "image": "teknorama.webp"
+        },
+        {
+            "name": "Emfuleni Golf Estate",
+            "address": "Golf Road, Vanderbijlpark",
+            "description": "18-hole championship golf course with stunning riverside views and clubhouse facilities.",
+            "image": "golf-estate.webp"
+        },
+        {
+            "name": "Vaal Walk Shopping Centre",
+            "address": "Frikkie Meyer Blvd, Vanderbijlpark",
+            "description": "Modern shopping center with a variety of retail stores and restaurants.",
+            "image": "vaal-walk.webp"
+        }
+    ]
+}

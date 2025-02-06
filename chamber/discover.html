@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Discover the Vaal Triangle - A vibrant business community with rich history and opportunities">
+    <meta name="author" content="Dieketseng Judith Motsetse">
+    
+    <meta property="og:title" content="Discover Vaal Triangle Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://djmotsetse.github.io/wdd231/chamber/images/chamber-logo.png">
+    <meta property="og:url" content="https://djmotsetse.github.io/wdd231/chamber/discover">
+    
+    <title>Discover | Vaal Triangle Chamber</title>
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="preload" as="image" href="images/discover/vaal-mall.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/chamber-logo.png" alt="Chamber Logo">
+                <h1>Vaal Triangle Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="discover">
+        <div id="visit-message" class="visit-message"></div>
+
+        <div class="discover-grid">
+            <!-- Cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Plot 22 Bloempark</p>
+                <p>Vanderbijlpark</p>
+                <p>Phone: 016 056 1419</p>
+                <p>Email: info@vaaltrianglechamber.org</p>
+            </div>
+            <nav class="social-media">
+                <h3 class="sr-only">Social Media Links</h3>
+                <ul>
+                    <li><a href="#" aria-label="Visit our YouTube page"><img src="images/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="#" aria-label="Visit our Twitter page"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#" aria-label="Visit our LinkedIn page"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Vaal Triangle Chamber | Dieketseng Judith Motsetse | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/discover.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Vaal Triangle Chamber of Commerce">
+    <meta name="author" content="Dieketseng Judith Motsetse">
+    
+    <title>Thank You | Vaal Triangle Chamber</title>
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+    <!-- Header same as other pages -->
+    <header>
+        <!-- Copy header content from join.html -->
+    </header>
+
+    <main class="thank-you">
+        <div class="thank-you-card">
+            <h2>Thank You for Joining!</h2>
+            <p>We're excited to have you as a member of the Vaal Triangle Chamber of Commerce.</p>
+            <div id="submission-details">
+                <!-- Form data will be inserted here by JavaScript -->
+            </div>
+            <a href="index.html" class="home-button">Return to Home</a>
+        </div>
+    </main>
+
+    <!-- Footer same as other pages -->
+    <footer>
+        <!-- Copy footer content from join.html -->
+    </footer>
+
+    <script>
+        // Display form submission details
+        document.addEventListener('DOMContentLoaded', function() {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+            if (formData) {
+                const details = document.getElementById('submission-details');
+                details.innerHTML = `
+                    <h3>Submission Details:</h3>
+                    <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+                    <p><strong>Email:</strong> ${formData.email}</p>
+                    <p><strong>Phone:</strong> ${formData.phone}</p>
+                    <p><strong>Business:</strong> ${formData.business}</p>
+                    <p><strong>Membership Level:</strong> ${formData.membership.toUpperCase()}</p>
+                    <p><strong>Submission Date:</strong> ${new Date(formData.timestamp).toLocaleString()}</p>
+                `;
+                // Clear localStorage
+                localStorage.removeItem('formData');
+            }
+        });
+    </script>
+</body>
+</html>

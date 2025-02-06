@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Join the Vaal Triangle Chamber of Commerce - Connect with local businesses and grow your network">
+    <meta name="author" content="Dieketseng Judith Motsetse">
+    
+    <meta property="og:title" content="Join Vaal Triangle Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://djmotsetse.github.io/wdd231/chamber/images/chamber-logo.png">
+    <meta property="og:url" content="https://djmotsetse.github.io/wdd231/chamber/join">
+    
+    <title>Join | Vaal Triangle Chamber</title>
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/chamber-logo.png" alt="Chamber Logo">
+                <h1>Vaal Triangle Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="join-page">
+        <h2>Join the Chamber</h2>
+        
+        <div class="membership-grid">
+            <div class="membership-cards">
+                <!-- NP Membership -->
+                <div class="membership-card np">
+                    <h3>NP Membership</h3>
+                    <p class="price">Free</p>
+                    <p>For Non-Profit Organizations</p>
+                    <button onclick="openModal('np-modal')" class="info-btn">View Benefits</button>
+                </div>
+
+                <!-- Bronze Membership -->
+                <div class="membership-card bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">R500/year</p>
+                    <p>For Small Businesses</p>
+                    <button onclick="openModal('bronze-modal')" class="info-btn">View Benefits</button>
+                </div>
+
+                <!-- Silver Membership -->
+                <div class="membership-card silver">
+                    <h3>Silver Membership</h3>
+                    <p class="price">R1000/year</p>
+                    <p>For Medium Businesses</p>
+                    <button onclick="openModal('silver-modal')" class="info-btn">View Benefits</button>
+                </div>
+
+                <!-- Gold Membership -->
+                <div class="membership-card gold">
+                    <h3>Gold Membership</h3>
+                    <p class="price">R1500/year</p>
+                    <p>For Large Businesses</p>
+                    <button onclick="openModal('gold-modal')" class="info-btn">View Benefits</button>
+                </div>
+            </div>
+
+            <form id="joinForm" action="thankyou.html" method="get">
+                <h3>Membership Application</h3>
+                
+                <label for="firstName">First Name*
+                    <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                </label>
+
+                <label for="lastName">Last Name*
+                    <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                </label>
+
+                <label for="title">Position Title*
+                    <input type="text" id="title" name="title" required 
+                           pattern="[A-Za-z\s-]{7,}" 
+                           title="Please enter at least 7 characters using only letters, hyphens, and spaces"
+                           autocomplete="organization-title">
+                </label>
+
+                <label for="email">Email*
+                    <input type="email" id="email" name="email" required 
+                           placeholder="example@domain.com"
+                           autocomplete="email">
+                </label>
+
+                <label for="phone">Mobile Phone*
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                </label>
+
+                <label for="business">Business/Organization Name*
+                    <input type="text" id="business" name="business" required autocomplete="organization">
+                </label>
+
+                <label for="membership">Membership Level*
+                    <select id="membership" name="membership" required>
+                        <option value="">Please Select</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label for="description">Business Description
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>Basic directory listing</li>
+                <li>Networking events access</li>
+                <li>Monthly newsletter</li>
+                <li>Community involvement opportunities</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>Enhanced directory listing</li>
+                <li>Social media mentions</li>
+                <li>Quarterly training sessions</li>
+                <li>All NP benefits included</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>Business spotlight opportunities</li>
+                <li>Event sponsorship options</li>
+                <li>Monthly training sessions</li>
+                <li>All Bronze benefits included</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>Premium directory placement</li>
+                <li>Featured business spotlights</li>
+                <li>Exclusive networking events</li>
+                <li>All Silver benefits included</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Plot 22 Bloempark</p>
+                <p>Vanderbijlpark</p>
+                <p>Phone: 016 056 1419</p>
+                <p>Email: info@vaaltrianglechamber.org</p>
+            </div>
+            <nav class="social-media">
+                <h3 class="sr-only">Social Media Links</h3>
+                <ul>
+                    <li><a href="#" aria-label="Visit our YouTube page"><img src="images/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="#" aria-label="Visit our Twitter page"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#" aria-label="Visit our LinkedIn page"><img src="images/linkedin.png" alt="LinkedIn"></a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Vaal Triangle Chamber | Dieketseng Judith Motsetse | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/join.js"></script>
+</body>
+</html>
