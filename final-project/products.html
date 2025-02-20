@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of handcrafted products from talented local artisans">
+    <title>Shop | Artisan's Haven</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Shop Artisan's Haven">
+    <meta property="og:description" content="Discover unique handcrafted products from local artisans">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://artisanshaven.com/products">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Artisan's Haven Logo" class="logo-image">
+                        <span class="logo-text">Artisan's Haven</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="nav-controls">
+                    <!-- Cart -->
+                    <a href="#" class="cart-icon" aria-label="Shopping cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="products-section">
+            <div class="container">
+                <h1 class="page-title">Our Collection</h1>
+
+                <div class="filters-section">
+                    <!-- ... filters ... -->
+                </div>
+        
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+        
+                <div id="no-results" style="display: none;">
+                    <p>No products found matching your criteria.</p>
+                </div>   
+
+                <!-- Search and Filters -->
+                <div class="filters-section">
+                    <div class="search-controls">
+                        <div class="search-bar">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" 
+                                   id="search-input" 
+                                   placeholder="Search for artisan products..."
+                                   aria-label="Search products">
+                        </div>
+                        
+                        <div class="filter-controls">
+                            <select id="category-filter" aria-label="Filter by category">
+                                <option value="">All Categories</option>
+                                <option value="pottery">Pottery</option>
+                                <option value="jewelry">Jewelry</option>
+                                <option value="textiles">Textiles</option>
+                                <option value="leather">Leather</option>
+                                <option value="glass">Glass</option>
+                                <option value="metalwork">Metalwork</option>
+                                <option value="woodwork">Woodwork</option>
+                            </select>
+
+                            <select id="price-filter" aria-label="Filter by price">
+                                <option value="">All Prices</option>
+                                <option value="under-50">Under $50</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-200">$100 - $200</option>
+                                <option value="over-200">Over $200</option>
+                            </select>
+                
+                            <select id="sort-filter" aria-label="Sort by">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest Arrivals</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Filters -->
+                <div class="active-filters" id="active-filters">
+                    <!-- Active filters will be displayed here -->
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-grid" role="list">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+
+                <!-- Loading State -->
+                <div class="loading-spinner" id="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+
+                <!-- No Results State -->
+                <div class="no-results" id="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <p>No products found matching your criteria.</p>
+                    <button class="btn btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be generated dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Artisan's Haven is a curated marketplace connecting talented artisans with conscious consumers who value quality and craftsmanship.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Artisan's Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div id="modal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications-container" class="notifications-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

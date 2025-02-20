@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Artisan's Haven - Get in touch with us for any inquiries">
+    <title>Contact Us | Artisan's Haven</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Contact Artisan's Haven">
+    <meta property="og:description" content="Get in touch with us for any inquiries about our handcrafted products">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://artisanshaven.com/contact">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Artisan's Haven Logo" class="logo-image">
+                        <span class="logo-text">Artisan's Haven</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="nav-controls">
+                    <!-- Cart -->
+                    <a href="#" class="cart-icon" aria-label="Shopping cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="page-title">Contact Us</h1>
+                
+                <div class="contact-wrapper">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>Have questions about our products or interested in becoming an artisan? We'd love to hear from you!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-text">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:info@artisanshaven.com">info@artisanshaven.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-text">
+                                    <h3>Phone</h3>
+                                    <p><a href="tel:+27165961419">+27 16 596 1419</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-location-dot"></i>
+                                <div class="contact-text">
+                                    <h3>Address</h3>
+                                    <p>22 Bloempark<br>Vanderbijlpark, 1911</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="business-hours">
+                            <h3>Business Hours</h3>
+                            <ul>
+                                <li><span>Monday - Friday:</span> 9:00 AM - 6:00 PM</li>
+                                <li><span>Saturday:</span> 10:00 AM - 4:00 PM</li>
+                                <li><span>Sunday:</span> Closed</li>
+                            </ul>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" 
+                                       id="name" 
+                                       name="name" 
+                                       required 
+                                       minlength="2"
+                                       aria-required="true">
+                                <div class="error-message" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       required
+                                       aria-required="true">
+                                <div class="error-message" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" 
+                                        name="subject" 
+                                        required
+                                        aria-required="true">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="artisan">Become an Artisan</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-message" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          rows="5" 
+                                          required
+                                          minlength="10"
+                                          aria-required="true"></textarea>
+                                <div class="error-message" aria-live="polite"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <span class="button-text">Send Message</span>
+                                <span class="button-loader" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Artisan's Haven is a curated marketplace connecting talented artisans with conscious consumers who value quality and craftsmanship.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Artisan's Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Message Sent!</h3>
+                <p>Thank you for contacting us. We'll get back to you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications-container" class="notifications-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

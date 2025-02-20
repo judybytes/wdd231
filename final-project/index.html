@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artisan's Haven - A curated marketplace for handcrafted goods from local artisans">
+    <title>Artisan's Haven | Handcrafted with Love</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Artisan's Haven">
+    <meta property="og:description" content="Discover unique handcrafted goods from talented local artisans">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://artisanshaven.com">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="main-nav">
+            <div class="nav-wrapper container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Artisan's Haven Logo" class="logo-image">
+                        <span class="logo-text">Artisan's Haven</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="nav-controls">
+                    <!-- Cart -->
+                    <a href="#" class="cart-icon" aria-label="Shopping cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image-container">
+                <img src="images/hero/hero-main.jpg" alt="Making of a Sculpture" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <h1>Handcrafted with Love</h1>
+                <p>Discover unique pieces created by talented local artisans</p>
+                <a href="products.html" class="btn btn-primary">Explore Collection</a>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="featured-categories">
+            <div class="container">
+                <h2 class="section-title">Browse Categories</h2>
+                <div class="categories-wrapper">
+                    <!-- Pottery -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/categories/pottery.jpg" alt="Pottery" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Pottery</h3>
+                                <p>Handcrafted ceramic pieces</p>
+                                <span class="items-count">15 items</span>
+                                <a href="products.html?category=pottery" class="category-link">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jewelry -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/categories/jewelry.jpg" alt="Jewelry" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Jewelry</h3>
+                                <p>Unique handmade jewelry</p>
+                                <span class="items-count">20 items</span>
+                                <a href="products.html?category=jewelry" class="category-link">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Textiles -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/categories/textiles.jpg" alt="Textiles" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Textiles</h3>
+                                <p>Handwoven fabrics & designs</p>
+                                <span class="items-count">12 items</span>
+                                <a href="products.html?category=textiles" class="category-link">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glass Art -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/categories/glass.jpg" alt="Glass Art" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Glass Art</h3>
+                                <p>Beautiful glass creations</p>
+                                <span class="items-count">8 items</span>
+                                <a href="products.html?category=glass" class="category-link">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Woodwork -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="images/categories/woodwork.jpg" alt="Woodwork" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Woodwork</h3>
+                                <p>Handcrafted wooden pieces</p>
+                                <span class="items-count">10 items</span>
+                                <a href="products.html?category=woodwork" class="category-link">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid" id="featured-products">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>At Artisan's Haven, we believe in the power of handmade crafts and supporting local artisans. Each piece tells a unique story, crafted with dedication and expertise passed down through generations.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Local Artisans</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Unique Products</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>At Artisan's Haven, we believe in the power of handmade crafts and supporting local artisans. Each piece tells a unique story, crafted with dedication and expertise passed down through generations.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Local Artisans</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Unique Products</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Artisan's Haven is a curated marketplace connecting talented artisans with conscious consumers who value quality and craftsmanship.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Artisan's Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications-container" class="notifications-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
